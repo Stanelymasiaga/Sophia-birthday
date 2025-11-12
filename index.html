@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sophia's Birthday — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero card">
+      <div class="logo">
+        <div class="heart">♥</div>
+        <div>
+          <h1>Sophia — You're Loved</h1>
+          <p>Enter the little secret to reveal a special message. Designed with love ✨</p>
+        </div>
+      </div>
+
+      <div class="message-area">
+        <p class="small">A warm, catchy theme that celebrates the heart. Change the message or styles inside <code>style.css</code>.</p>
+      </div>
+
+      <div class="centered" style="margin-top:8px">
+        <div class="small">Made by Stanely with ♥</div>
+      </div>
+
+      <footer>
+        Tip: Use Live Server in VS Code to preview live while you edit.
+      </footer>
+    </section>
+
+    <section class="card">
+      <div id="loginView">
+        <h2 style="margin:0 0 8px 0;color:var(--muted)">Sign in to see the surprise</h2>
+        <form class="login" onsubmit="return handleLogin(event)">
+          <div>
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="Enter username" required />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter password" required />
+          </div>
+          <div class="centered" style="margin-top:6px">
+            <button class="btn" type="submit">Log in</button>
+          </div>
+          <div class="small centered" style="margin-top:8px;color:#9a7a8a">Hint: It's a birthday secret 😉</div>
+        </form>
+      </div>
+
+      <div id="celebrateView" style="display:none">
+        <div class="celebrate">
+          <div class="message" id="greeting">Happy 25th Birthday Sophia ♥️</div>
+          <p style="text-align:center; color:#7a5b6b; font-size:15px; max-width:360px;">
+            Sophia, you are more than words can describe — a shining light, a gentle soul, and the heartbeat of every happy moment. 
+            You inspire me every day with your kindness, strength, and smile. I feel lucky to know you, 
+            to celebrate you, and to remind you that you are truly special — today and always. 💖
+          </p>
+          <div class="balloons">
+            <div class="balloon" style="background:linear-gradient(180deg,#ffd3e6,#ff9acb);transform:translateY(-6px)"></div>
+            <div class="balloon" style="background:linear-gradient(180deg,#ffe7d3,#ffb8a6);transform:translateY(-12px)"></div>
+            <div class="balloon" style="background:linear-gradient(180deg,#f2d9ff,#cda4ff);transform:translateY(-4px)"></div>
+          </div>
+          <div>
+            <button class="btn" onclick="logout()">Log out</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
